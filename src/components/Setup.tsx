@@ -10,7 +10,7 @@ export default function Setup({ onSetup }: { onSetup: (name: string, amount: num
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const val = parseFloat(amount);
-    if (!isNaN(val) && val > 0 && name.trim()) {
+    if (!isNaN(val) && val >= 0 && name.trim()) {
       onSetup(name.trim(), val, period);
     }
   };
@@ -49,10 +49,10 @@ export default function Setup({ onSetup }: { onSetup: (name: string, amount: num
               type="number"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
-              placeholder="Например: 5000"
+              placeholder="Например: 5000 (можно 0)"
               className="w-full text-2xl px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none"
               required
-              min="1"
+              min="0"
               step="any"
             />
           </div>

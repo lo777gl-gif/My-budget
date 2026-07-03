@@ -73,7 +73,7 @@ export default function Dashboard({
   if (!activeWallet) return null;
 
   return (
-    <div className="min-h-screen bg-gray-50 pb-24">
+    <div className="min-h-screen bg-gray-50 pb-40">
       {/* Header / Balance Card */}
       <div className="bg-blue-600 text-white pt-8 pb-8 px-6 rounded-b-[2.5rem] shadow-lg relative">
         
@@ -227,7 +227,7 @@ export default function Dashboard({
       </div>
 
       {/* Floating Action Buttons */}
-      <div className="fixed bottom-6 left-0 right-0 flex justify-center gap-4 px-6 max-w-md mx-auto z-10">
+      <div className="fixed bottom-24 left-0 right-0 flex justify-center gap-4 px-6 max-w-md mx-auto z-10">
         <button
           onClick={() => openAddModal('expense')}
           className="flex-1 bg-red-500 hover:bg-red-600 text-white py-4 rounded-2xl shadow-lg flex items-center justify-center gap-2 font-medium transition-transform active:scale-95"

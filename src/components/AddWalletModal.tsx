@@ -24,7 +24,7 @@ export default function AddWalletModal({ isOpen, onClose, onAdd }: Props) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const val = parseFloat(amount);
-    if (!isNaN(val) && val > 0 && name.trim()) {
+    if (!isNaN(val) && val >= 0 && name.trim()) {
       onAdd(name.trim(), val, period);
       onClose();
     }
@@ -76,7 +76,7 @@ export default function AddWalletModal({ isOpen, onClose, onAdd }: Props) {
                   placeholder="0"
                   className="w-full text-2xl px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none"
                   required
-                  min="1"
+                  min="0"
                   step="any"
                 />
               </div>
